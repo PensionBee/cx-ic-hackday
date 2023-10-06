@@ -18,33 +18,31 @@ export const options = {
 
 console.log(morningstarData.Portfolios[0].AssetAllocations) ;
 
-const { BreakdownValues } = morningstarData.Portfolios[0].GlobalBondSectorBreakdownLevel1[0];
+const portfolio = morningstarData.Portfolios[0]
+
+const { BreakdownValues } = portfolio.AssetAllocations.find(({ SalePosition }) => SalePosition === 'L');
 
 const labelMap = {
-  "10": {
-    label: "Government",
+  "1": {
+    label: "Stocks",
     colour: "#F9C000",
   },
-  "20": {
-    label: "Municipal",
+  "2": {
+    label: "Bonds",
     colour: "#007DB7",
   },
-  "30": {
-    label: "Corporate",
+  "3": {
+    label: "Cash",
     colour: "#24B6B6",
   },
-  "40": {
-    label: "Securitized",
+  "4": {
+    label: "Other",
     colour: "#D7384D",
   },
-  "50": {
-    label: "Cash & Equivalents",
+  "99": {
+    label: "Unclassified",
     colour: "#FA8C2E",
-  },
-  "60": {
-    label: "Derivative",
-    colour: "#519828",
-  },
+  }
 };
 
 const sorted = BreakdownValues.sort((a, b) =>  b.Value - a.Value)
