@@ -46,8 +46,6 @@ const labelMap = {
 };
 
 const sorted = BreakdownValues.sort((a, b) =>  b.Value - a.Value)
-
-
 const dataValues = sorted.map((item) => item.Value.toFixed(2));
 const labels = sorted.map((item) => `${labelMap[item.Type].label} ${item.Value.toFixed(2)}%`);
 const colours = sorted.map((item) => labelMap[item.Type].colour);

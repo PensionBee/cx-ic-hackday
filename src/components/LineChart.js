@@ -9,7 +9,7 @@ import {
   Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
-import { morningstarData } from '../data/VAUSA0NKXT';
+import { priceData } from '../data/priceData';
 
 ChartJS.register(
   CategoryScale,
@@ -29,20 +29,20 @@ export const options = {
   },
 };
 
-const { HistoricalPerformanceSeries } = morningstarData;
-const returns = HistoricalPerformanceSeries[1];
-
-const labels = ['2022', '2021', '2020', '2019', '2018', '2017', '2016'];
-const returnsData = returns.Return.map(
-  (returnData) => returnData?.Value?.toFixed(2) || 0
-);
+const slicedData = priceData.slice(-50);
+const dataValues = slicedData.map((item) => {
+  const convertedValue = Number.parseFloat(item.Value);
+  const convertedValueFixed = convertedValue.toFixed(2);
+  return convertedValueFixed;
+});
+const labels = slicedData.map((item) => item.EndDate);
 
 export const data = {
   labels,
   datasets: [
     {
       label: 'Fund past performance',
-      data: returnsData,
+      data: dataValues,
       borderColor: '#F9C000',
       backgroundColor: '#F9C000',
     },
