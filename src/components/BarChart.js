@@ -4,7 +4,6 @@ import {
   CategoryScale,
   LinearScale,
   BarElement,
-  Title,
   Tooltip,
   Legend,
 } from 'chart.js';
@@ -15,7 +14,6 @@ ChartJS.register(
   CategoryScale,
   LinearScale,
   BarElement,
-  Title,
   Tooltip,
   Legend
 );
@@ -25,10 +23,6 @@ export const options = {
   plugins: {
     legend: {
       position: 'top',
-    },
-    title: {
-      display: true,
-      text: 'Chart.js Bar Chart',
     },
   },
 };
