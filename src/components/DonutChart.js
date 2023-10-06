@@ -7,6 +7,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export const options = {
   responsive: true,
+  radius: '50%',
   plugins: {
     legend: {
       display: true,
@@ -57,7 +58,7 @@ export const data = {
   labels,
   datasets: [
     {
-      label: 'percentage allocation',
+      label: ' % allocation',
       data: dataValues,
       backgroundColor: colours,
       borderWidth: 1,
@@ -66,7 +67,11 @@ export const data = {
 };
 
 export function DonutChart() {
-  return <Doughnut options={options} data={data} />;
+  return (
+    <div className="DonutChart">
+      <Doughnut options={options} data={data} />
+    </div>
+  );
 }
 
 export default DonutChart;
