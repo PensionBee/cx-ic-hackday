@@ -66,7 +66,7 @@ export const data = {
   ],
 };
 
-export function DonutChart() {
+function DonutChart() {
   return (
     <div className="DonutChart">
       <Doughnut options={options} data={data} />
