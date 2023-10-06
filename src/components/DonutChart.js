@@ -17,7 +17,7 @@ export const options = {
 
 console.log(morningstarData.Portfolios[0].AssetAllocations) ;
 
-const {BreakdownValues} = morningstarData.Portfolios[0].AssetAllocations[0];
+const {BreakdownValues} = morningstarData.Portfolios[0].GlobalBondSectorBreakdownLevel1[0];
 
 
 const labels = BreakdownValues.map((item) => item.Type);
