@@ -20,14 +20,25 @@ console.log(morningstarData.Portfolios[0].AssetAllocations) ;
 const {BreakdownValues} = morningstarData.Portfolios[0].GlobalBondSectorBreakdownLevel1[0];
 
 
-const labels = BreakdownValues.map((item) => item.Type);
+const labelMap = {
+  "10": "Government",
+  "20": "Municipal",
+  "30": "Corporate",
+  "40": "Securitized",
+  "50": "Cash & Equivalents",
+  "60": "Derivative"
+}
 
-const dataValues = BreakdownValues.map((item) => item.Value);
+const sorted = BreakdownValues.sort((a, b) =>  a.Value - b.Value )
 
+const labels = sorted.map((item) => labelMap[item.Type]);
+
+const dataValues = sorted.map((item) => item.Value);
 
 const randomColourArray = Array.from({length: labels.length}).map(() => {
   return '#' + Math.floor(Math.random()*16777215).toString(16);
 })
+
 
 
 console.log(randomColourArray);
