@@ -1,17 +1,21 @@
 import React from 'react';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, Title } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
 import { morningstarData } from '../data/VAUSA0NKXT';
 
-ChartJS.register(ArcElement, Tooltip, Legend);
+ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
 export const options = {
   responsive: true,
-  radius: '50%',
+  radius: '75%',
   plugins: {
     legend: {
       display: true,
       position: 'left',
+    },
+    title: {
+      display: true,
+      text: 'Tailored - Fund Allocation',
     },
   },
 };

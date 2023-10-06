@@ -14,7 +14,7 @@ function App() {
       < br />
       < br />
 
-      <LineChart />
+      <DonutChart />
 
       < br />
       < br />
@@ -22,7 +22,7 @@ function App() {
       < br />
       < br />
 
-      <DonutChart />
+      <LineChart />
     </div>
   );
 }

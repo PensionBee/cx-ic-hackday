@@ -7,6 +7,7 @@ import {
   LineElement,
   Tooltip,
   Legend,
+  Title
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
 import { priceData } from '../data/priceData';
@@ -17,7 +18,8 @@ ChartJS.register(
   PointElement,
   LineElement,
   Tooltip,
-  Legend
+  Legend,
+  Title
 );
 
 export const options = {
@@ -26,6 +28,10 @@ export const options = {
     legend: {
       position: 'top',
     },
+    // title: {
+    //   display: true,
+    //   text: 'Tailored - Fund Allocation',
+    // },
   },
 };
 
