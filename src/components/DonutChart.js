@@ -1,6 +1,7 @@
 import React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Title, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
+import { morningstarData } from '../data/VAUSA0NKXT';
 
 ChartJS.register(ArcElement, Tooltip, Legend, Title);
 
@@ -13,6 +14,8 @@ export const options = {
     },
   },
 };
+
+console.log(morningstarData.Portfolios[0].AssetAllocations) ;
 
 export const data = {
   labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
