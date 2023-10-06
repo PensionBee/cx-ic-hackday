@@ -1,0 +1,70 @@
+{
+  "MorningstarEUR3": [{
+    "1": "Stock",
+    "2": "Bond",
+    "3": "Cash",
+    "4": "Other",
+    "99": "Unclassified"
+  }],
+  "MorningstarEUR6": [{
+    "1": "UK/Euro Stock",
+    "2": "North American Stock",
+    "3": "Other Stock",
+    "4": "Bond Euro",
+    "5": "Bond Non-Euro",
+    "6": "Cash",
+    "7": "Other",
+    "99": "Unclassified"
+  }],
+  "MorningstarUK7": [{
+    "1": "UK/Euro Stock",
+    "2": "EU Stock",
+    "3": "Other Stock",
+    "4": "Bond",
+    "5": "Cash",
+    "6": "Property",
+    "7": "Other"
+  }],
+  "MorningstarEUR4Com": [{
+    "1": "Stock",
+    "2": "Bond",
+    "3": "Commodity",
+    "4": "Cash",
+    "5": "Other"
+  }],
+  "MorningstarUSA5": [{
+    "1": "US Stock",
+    "2": "Other Stock",
+    "3": "Bond",
+    "4": "Cash",
+    "5": "Other"
+  }],
+  "MorningstarCAN6": [{
+    "1": "Canada Stock",
+    "2": "US Stock",
+    "3": "International Stock",
+    "4": "Bond",
+    "5": "Cash",
+    "6": "Other"
+  }],
+  "MorningstarSA12": [{
+    "1": "SA Bond",
+    "2": "Non SA Bond",
+    "3": "SA Equity",
+    "4": "SA Property",
+    "5": "Non SA Equity",
+    "6": "Non SA Property",
+    "7": "SA Cash",
+    "8": "Non SA Cash",
+    "9": "SA Other",
+    "10": "Non SA Other",
+    "11": "SA Unit Trust",
+    "12": "Non SA Unit Trust",
+    "13": "Africa Bond",
+    "14": "Africa Equity",
+    "15": "Africa Property",
+    "16": "Africa Cash",
+    "17": "Africa Unit Trust",
+    "18": "Africa Other"
+  }]
+}
