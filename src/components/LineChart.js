@@ -28,10 +28,10 @@ export const options = {
     legend: {
       position: 'top',
     },
-    // title: {
-    //   display: true,
-    //   text: 'Tailored - Fund Allocation',
-    // },
+    title: {
+      display: true,
+      text: 'Tailored - Past Performance',
+    },
   },
 };
 
